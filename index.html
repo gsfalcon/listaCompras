@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!-- HEADER -->
 <head>
+<!-- META TAGS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa para gerar uma lista de compras <v1 class="0"></v1></title>
+    <title>Programa para gerar uma lista de compras</title>
 </head>
-
+<!-- STYLE -->
 <style>
-
     body {
         font-size: 20px;
-        background-color:rgb(218, 196, 138);
+        background-color:brown;
         color: black;
         font-weight: bolder;
     }
-    </style>
-
+</style>
+<!-- BODY -->
 <body>
-<h1>💸 Lista de Compras</h1>
-<p>Produto: <input type="text" name="produto" id="nomeProdutoForm"></p>
-<p>Preço Unidade: <input type="number" name="precoUnid" id="precoProdutoForm"></p>
-
-<button type="button">PROCESSAR</button>
-
-
-<p>Quantidade: <input type="number" name="qtde" id="qtde"></p>
-<p>Categoria: <input type="text"> </p>
-
-<p>Quantidade: </p>
-<p>Categoria: </p>
-<p>Mercado: </p>
-<p>Frágil?</p>
-
-
-
-
-
-<script src="listaCompras.js"></script>
-
+    Produto
+        <input id="nomeProdutoForm" type="text" />
+    Preço
+        <input id="precoProdutoForm" type="text" />
+    Quantidade
+        <input id="qtdeProdutoForm" type="text" />
+    Mercado
+        Extra       <input name="extra" type="radio" />
+        Savegnago   <input type="radio" />
+        JM          <input type="radio" />
+        Outros      <input type="radio" />
+    Categoria:
+        <select>
+        <option selected="selected" value="limpeza">Limpeza</option>
+        <option value="carnes">Carnes</option>
+        <option value="gatito">Gatito</option>
+        <option value="maconha">Maconha</option>
+        <option value="carnes222">Carnes222</option>
+        <option value="gatito222">Gatito222</option>
+        <option value="maconha222">Maconha222</option>
+        <option value="carnes333">Carnes333</option>
+        <option value="gatito33">Gatito33</option>
+        <option value="maconha333">Maconha333</option>
+        </select>
+    Frágil?
+        <input type="radio" />SIM
+        <input type="radio" />NÃO
+    Buttons:
+        <input type="button" value="LIMPAR" />
+        <input type="button" value="SALVAR" />
+        <input type="button" value="EXIBIR LISTA CORRIDA" />
+        <input type="button" value="VER GRÁFICOS" />
+<!--JAVASCRIPT -->
+    <script>
+        //variables
+        var nomeProduto = document.getElementById(nomeProdutoForm);
+        var precoProduto = document.getElementById(precoProdutoForm);
+        //    precoProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+        var fragil = Boolean('');
+        var categoria = String('');
+        var mercado = String('');
+        var qtdeProduto = Number('');
+        var result = (nomeProduto + precoProduto);
+        document.write(result);
+    </script>
 </body>
 </html>
