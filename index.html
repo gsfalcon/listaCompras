@@ -20,49 +20,57 @@
 <!-- BODY -->
 <body>
     Produto
-        <input id="nomeProdutoForm" type="text" />
+        <input id="nomeProdutoForm" type="number" />
     Preço
-        <input id="precoProdutoForm" type="text" />
+        <input id="precoProdutoForm" type="number" />
     Quantidade
         <input id="qtdeProdutoForm" type="text" />
     Mercado
-        Extra       <input name="extra" type="radio" />
-        Savegnago   <input type="radio" />
-        JM          <input type="radio" />
-        Outros      <input type="radio" />
+        Extra       <input id="" name="extra" type="radio" />
+        Savegnago   <input id="" type="radio" />
+        JM          <input id="" type="radio" />
+        Outros      <input id="" type="radio" />
     Categoria:
         <select>
         <option selected="selected" value="limpeza">Limpeza</option>
-        <option value="carnes">Carnes</option>
-        <option value="gatito">Gatito</option>
-        <option value="maconha">Maconha</option>
-        <option value="carnes222">Carnes222</option>
-        <option value="gatito222">Gatito222</option>
-        <option value="maconha222">Maconha222</option>
-        <option value="carnes333">Carnes333</option>
-        <option value="gatito33">Gatito33</option>
-        <option value="maconha333">Maconha333</option>
+        <option id="" value="catLimpeza">Limpeza</option>
+        <option id="" value="catGato">Gatito</option>
+        <option id="" value="catMaconha">Maconha</option>
         </select>
     Frágil?
         <input type="radio" />SIM
         <input type="radio" />NÃO
     Buttons:
-        <input type="button" value="LIMPAR" />
-        <input type="button" value="SALVAR" />
-        <input type="button" value="EXIBIR LISTA CORRIDA" />
-        <input type="button" value="VER GRÁFICOS" />
+        <input type="button" id="btLimpar" value="LIMPAR" />
+        <input type="button" id="btSalvar" value="SOMAR" onclick="addProduto()"/>
+        <input type="button" id="btLista" value="EXIBIR LISTA CORRIDA" />
+        <input type="button" id="btGraficos" value="VER GRÁFICOS" />
 <!--JAVASCRIPT -->
     <script>
-        //variables
-        var nomeProduto = document.getElementById(nomeProdutoForm);
-        var precoProduto = document.getElementById(precoProdutoForm);
-        //    precoProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
-        var fragil = Boolean('');
-        var categoria = String('');
-        var mercado = String('');
-        var qtdeProduto = Number('');
-        var result = (nomeProduto + precoProduto);
-        document.write(result);
+        var nomeProduto = document.getElementById("nomeProdutoForm");
+        var precoProduto = document.getElementById("precoProdutoForm");
+
+    function addProduto() {
+        var soma = nomeProduto + precoProduto;
+        soma.innerHTML = "SOMADO"
+      alert('a soma entre' ${nomeProduto} 'e' ${precoProduto} 'é o total de' ${soma} 'apenas isso')
+    }
+
+
+     
+//        //variables
+//
+//            precoProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+//        var fragil = Boolean('');
+ //       var mercado = ["Extra", "Savegnago", "JM", "Outros"];
+ //       var qtdeProduto = Number('');
+ //       var categoria = ["catLimpeza", "catGato", "catMaconha"];
+ //       
+//
+//        window.document.write("TESTE");
+
+//
+ //       window.document.write('TESTE');
     </script>
 </body>
 </html>
